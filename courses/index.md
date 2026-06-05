@@ -5,7 +5,8 @@ permalink: /courses/
 ---
 
 <div class="row g-3">
-  {% for course in site.data.courses %}
+  {% assign sorted_courses = site.data.courses | sort: 'name' %}
+  {% for course in sorted_courses %}
     <div class="col-md-6">
       <article class="card card-elevated h-100">
         <div class="card-body">

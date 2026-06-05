@@ -42,7 +42,11 @@ layout: default
           {% assign related_skill = site.data.skills | where: 'skill_ref', descriptor.skill_ref | first %}
           <article class="list-group-item">
             <div class="d-flex justify-content-between flex-wrap gap-2 mb-1">
-              <a href="{{ related_skill.url | relative_url }}">{{ related_skill.name }}</a>
+              {% if related_skill %}
+                <a href="{{ related_skill.url | relative_url }}">{{ related_skill.name }}</a>
+              {% else %}
+                <span>{{ descriptor.skill_ref }}</span>
+              {% endif %}
               <span class="text-body-secondary small">Level {{ descriptor.level_number }}</span>
             </div>
             <p class="mb-0">{{ descriptor.descriptor }}</p>
