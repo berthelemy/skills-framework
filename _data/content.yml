@@ -1,0 +1,7 @@
+branding:
+  site_name: Skills Framework
+  tag_line: Human skills modeled for people and agents
+  primary_color: "#0d6efd"
+  secondary_color: "#212529"
+  accent_color: "#198754"
+  font_family: "system-ui, sans-serif"

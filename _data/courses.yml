@@ -1,0 +1,18 @@
+- course_ref: course-accessible-html-foundations
+  name: Accessible HTML Foundations
+  provider: SkillPath Academy
+  url: /courses/accessible-html-foundations/
+  external_url: https://example.com/courses/accessible-html-foundations
+  description: Introductory course covering semantic HTML, labels, and keyboard access.
+- course_ref: course-wcag-review-workflow
+  name: WCAG Review Workflow
+  provider: SkillPath Academy
+  url: /courses/wcag-review-workflow/
+  external_url: https://example.com/courses/wcag-review-workflow
+  description: Practical course for reviewing UI markup against WCAG 2.2 AA checks.
+- course_ref: course-machine-readable-taxonomy
+  name: Machine-Readable Taxonomy Design
+  provider: SkillPath Academy
+  url: /courses/machine-readable-taxonomy/
+  external_url: https://example.com/courses/machine-readable-taxonomy
+  description: Course on structuring domain concepts into stable data models.

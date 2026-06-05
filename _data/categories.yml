@@ -1,0 +1,6 @@
+- category_ref: accessibility
+  name: Accessibility
+  description: Designing and reviewing interfaces for inclusive use.
+- category_ref: data-modeling
+  name: Data Modeling
+  description: Structuring domain data for reuse and interoperability.

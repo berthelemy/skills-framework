@@ -55,3 +55,5 @@ A category can contain one or more skills. A skill can be linked to one or more 
 The human-readable version will use a Bootstrap website, with branding configurable from a content configuration file.
 
 The Jekyll _config.yml file will be kept separate from the content configuration file.
+
+Each skill and course should be individually addressable with a URL.

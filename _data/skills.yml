@@ -1,0 +1,10 @@
+- skill_ref: semantic-html
+  name: Semantic HTML
+  description: Create accessible, semantic HTML for web content.
+  category_ref: accessibility
+  url: /skills/semantic-html/
+- skill_ref: taxonomy-design
+  name: Taxonomy Design
+  description: Model related concepts into stable machine-readable structures.
+  category_ref: data-modeling
+  url: /skills/taxonomy-design/
