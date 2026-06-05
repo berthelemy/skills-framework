@@ -4,9 +4,9 @@ description: 'Define human skills in a machine-readable way. Use when normalizin
 argument-hint: 'Raw skill concept or draft taxonomy'
 ---
 
-# Machine-Readable Skills
+# Machine-readable skills
 
-## When to Use
+## When to use
 Use this skill when turning a human-friendly skill idea into the structured skill model used by this repository, or when checking that existing skill content is internally consistent.
 
 ## Goal
@@ -47,7 +47,7 @@ Produce skill definitions that are stable, structured, and easy for both humans 
    - Avoid duplicate concepts under different labels.
    - Mark unknown data as missing rather than inventing it.
 
-## Decision Rules
+## Decision rules
 - Use one category when multiple skills share the same domain and audience.
 - Split categories only when the taxonomy would otherwise become ambiguous.
 - Link a skill to more than one level when the skill grows meaningfully across proficiency bands.
@@ -64,7 +64,7 @@ Treat the definition as complete only when all of these are true:
 - the same concept is not modeled twice under different names
 - the structure can be serialized without adding extra interpretation
 
-## Review Output
+## Review output
 When reviewing a skill definition, report:
 - the missing or ambiguous field
 - why it breaks machine readability or consistency

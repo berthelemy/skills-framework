@@ -1,6 +1,6 @@
-# How to Use This Site
+# How to use this site
 
-## For Humans
+## For humans
 
 Use the website to browse:
 
@@ -16,7 +16,7 @@ Navigation is available in the top menu:
 - Skills
 - Courses
 
-## For Machines and AI Agents
+## For machines and ai agents
 
 This framework is designed for structured consumption with:
 
@@ -30,7 +30,7 @@ This framework is designed for structured consumption with:
   - `/robots.txt`
   - `/sitemap.xml`
 
-## Validate Output Locally
+## Validate output locally
 
 Run:
 

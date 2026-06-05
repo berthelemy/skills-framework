@@ -4,12 +4,12 @@ description: 'Create or review HTML so it is semantic, keyboard-accessible, scre
 argument-hint: 'HTML to create or review'
 ---
 
-# WCAG 2.2 AA HTML
+# Wcag 2.2 aa html
 
-## When to Use
+## When to use
 Use this skill when producing or reviewing HTML that must meet WCAG 2.2 Level AA expectations. It applies to static markup, templates, component output, and HTML snippets that need accessible structure and behavior.
 
-## Core Goal
+## Core goal
 Produce HTML that is:
 - semantic first
 - operable by keyboard
@@ -66,7 +66,7 @@ Produce HTML that is:
    - Avoid layouts that break at 200% zoom or reflow poorly.
    - Respect `prefers-reduced-motion` when animations are used.
 
-## Completion Checks
+## Completion checks
 Treat the HTML as complete only when all of these are true:
 - the document structure is semantic and logical
 - all interactive elements are keyboard reachable and visible on focus
@@ -76,13 +76,13 @@ Treat the HTML as complete only when all of these are true:
 - ARIA is minimal, valid, and not replacing native semantics
 - the markup still works at zoom, reflow, and reduced-motion preferences
 
-## Decision Rules
+## Decision rules
 - If a native element can do the job, use it.
 - If visible text already names the control, do not add redundant ARIA.
 - If a custom widget is unavoidable, define its name, role, and state carefully and test keyboard interaction first.
 - If an accessibility requirement conflicts with visual design, change the design rather than hiding the problem in markup.
 
-## Review Output
+## Review output
 When reviewing HTML, report:
 - the issue
 - why it affects WCAG 2.2 AA behavior

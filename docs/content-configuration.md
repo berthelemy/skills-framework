@@ -1,8 +1,8 @@
-# Whole-Site Content Configuration
+# Whole-site content configuration
 
 This project uses a whole-site configuration data file for branding and metadata defaults.
 
-## What `_data/content.yml` Controls
+## What `_data/content.yml` controls
 
 - Home page text snippets (for example `home_text`)
 - Branding:
@@ -19,7 +19,7 @@ This project uses a whole-site configuration data file for branding and metadata
   - default image
   - twitter card type
 
-## Why It Matters
+## Why it matters
 
 Values from `_data/content.yml` are used by templates and metadata includes, including:
 
@@ -29,7 +29,7 @@ Values from `_data/content.yml` are used by templates and metadata includes, inc
 
 Keeping this file accurate ensures consistent branding and high-quality metadata across the entire site.
 
-## Recommended Update Process
+## Recommended update process
 
 1. Edit `_data/content.yml`.
 2. Build locally:

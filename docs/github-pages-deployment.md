@@ -1,4 +1,4 @@
-# GitHub Pages Deployment
+# Github pages deployment
 
 This repository includes a deployment workflow:
 
@@ -13,14 +13,14 @@ Set:
   - `""` for user/organization sites
   - `"/<repo>"` for project sites
 
-## Enable Pages with Actions
+## Enable pages with actions
 
 1. Commit and push the workflow file.
 2. In GitHub, open **Settings > Pages**.
 3. Set **Source** to **GitHub Actions**.
 4. Push to `main` or run the workflow manually from **Actions**.
 
-## Verify Deployment
+## Verify deployment
 
 Check these published paths:
 

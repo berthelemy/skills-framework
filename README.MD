@@ -1,4 +1,4 @@
-# Skills Framework
+# Skills framework
 
 A Jekyll + Bootstrap framework for publishing skills content that works for both humans and machines.
 
@@ -16,7 +16,7 @@ It provides:
 - Human-readable pages for browsing and navigation
 - Machine-readable outputs for AI agents and integrations
 
-## Quick Start
+## Quick start
 
 1. Clone and install dependencies:
 
@@ -47,7 +47,7 @@ bundle exec jekyll serve
 - GitHub Pages deployment: [docs/github-pages-deployment.md](docs/github-pages-deployment.md)
 - Interactive agent prompt templates: [docs/agent-prompts.md](docs/agent-prompts.md)
 
-## Related Project Guidance
+## Related project guidance
 
 - Framework requirements: [AGENTS.MD](AGENTS.MD)
 - Session metadata rules: [.github/copilot-instructions.md](.github/copilot-instructions.md)

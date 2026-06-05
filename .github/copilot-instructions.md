@@ -1,6 +1,6 @@
-# Copilot Session Instructions
+# Copilot session instructions
 
-## Metadata Maintenance (Every Session)
+## Metadata maintenance (every session)
 
 At the start of each session, review metadata-related files and update them if the session introduces new pages, URLs, entities, or content changes.
 

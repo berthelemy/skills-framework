@@ -1,6 +1,6 @@
-# Agent Prompt Templates
+# Agent prompt templates
 
-## Interactive Prompt: Add a Skill with Associated Data
+## Interactive prompt: add a skill with associated data
 
 ```text
 Add a new skill to this skills framework and include all associated data.
@@ -26,7 +26,7 @@ Output:
 - Validation result
 ```
 
-## Interactive Prompt: Add a Course with Associated Links
+## Interactive prompt: add a course with associated links
 
 ```text
 Add a new course to this skills framework and wire it to the correct skill level descriptors.
