@@ -4,7 +4,7 @@ description: 'Create or review HTML so it is semantic, keyboard-accessible, scre
 argument-hint: 'HTML to create or review'
 ---
 
-# Wcag 2.2 aa html
+# WCAG 2.2 AA HTML
 
 ## When to use
 Use this skill when producing or reviewing HTML that must meet WCAG 2.2 Level AA expectations. It applies to static markup, templates, component output, and HTML snippets that need accessible structure and behavior.
