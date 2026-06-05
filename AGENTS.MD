@@ -82,6 +82,7 @@ External links should open in a new tab.
 ## Visual design
 
 - Use Bootstrap cards to display multiple skills and courses
+- Use sentence case for headings
 
 ## GitHub Skills
 
