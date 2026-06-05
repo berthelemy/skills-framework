@@ -1,0 +1,56 @@
+---
+layout: default
+---
+{% assign course = site.data.courses | where: 'course_ref', page.course_ref | first %}
+{% assign related_descriptors = site.data.level_descriptors | where_exp: 'd', 'd.associated_courses contains page.course_ref' %}
+
+<div class="container">
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li class="breadcrumb-item"><a href="{{ '/courses/' | relative_url }}">Courses</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    </ol>
+  </nav>
+
+  <header class="mb-4">
+    <h1 class="h2 mb-2">{{ page.title }}</h1>
+    <p class="text-body-secondary mb-0">{{ course.description }}</p>
+  </header>
+
+  <section class="card card-elevated mb-4">
+    <div class="card-body">
+      <h2 class="h5">Course Metadata</h2>
+      <dl class="row mb-0">
+        <dt class="col-sm-3">Reference</dt>
+        <dd class="col-sm-9"><code>{{ page.course_ref }}</code></dd>
+
+        <dt class="col-sm-3">Provider</dt>
+        <dd class="col-sm-9">{{ course.provider }}</dd>
+
+        <dt class="col-sm-3">External URL</dt>
+        <dd class="col-sm-9"><a href="{{ course.external_url }}">{{ course.external_url }}</a></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h4">Linked Skill Levels</h2>
+    {% if related_descriptors and related_descriptors.size > 0 %}
+      <div class="list-group">
+        {% for descriptor in related_descriptors %}
+          {% assign related_skill = site.data.skills | where: 'skill_ref', descriptor.skill_ref | first %}
+          <article class="list-group-item">
+            <div class="d-flex justify-content-between flex-wrap gap-2 mb-1">
+              <a href="{{ related_skill.url | relative_url }}">{{ related_skill.name }}</a>
+              <span class="text-body-secondary small">Level {{ descriptor.level_number }}</span>
+            </div>
+            <p class="mb-0">{{ descriptor.descriptor }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No linked descriptors found for this course.</p>
+    {% endif %}
+  </section>
+</div>

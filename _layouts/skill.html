@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{% assign skill = site.data.skills | where: 'skill_ref', page.skill_ref | first %}
+{% assign category = site.data.categories | where: 'category_ref', page.category_ref | first %}
+{% assign descriptors = site.data.level_descriptors | where: 'skill_ref', page.skill_ref | sort: 'level_number' %}
+
+<div class="container">
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li class="breadcrumb-item"><a href="{{ '/skills/' | relative_url }}">Skills</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    </ol>
+  </nav>
+
+  <header class="mb-4">
+    <h1 class="h2 mb-2">{{ page.title }}</h1>
+    <p class="text-body-secondary mb-1">{{ skill.description }}</p>
+    {% if category %}
+      <span class="badge text-bg-light border">Category: {{ category.name }}</span>
+    {% endif %}
+  </header>
+
+  <section class="card card-elevated mb-4">
+    <div class="card-body">
+      <h2 class="h5">Skill Reference</h2>
+      <p class="mb-0"><code>{{ page.skill_ref }}</code></p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h4">Level Descriptors</h2>
+    {% if descriptors and descriptors.size > 0 %}
+      <div class="list-group">
+        {% for item in descriptors %}
+          {% assign level = site.data.levels | where: 'level_number', item.level_number | first %}
+          <article class="list-group-item">
+            <div class="d-flex justify-content-between flex-wrap gap-2 mb-1">
+              <strong>Level {{ item.level_number }}{% if level %}: {{ level.title }}{% endif %}</strong>
+              <span class="text-body-secondary small">{{ page.skill_ref }}</span>
+            </div>
+            <p class="mb-2">{{ item.descriptor }}</p>
+            {% if item.associated_courses and item.associated_courses.size > 0 %}
+              <div>
+                <span class="small text-body-secondary">Associated courses:</span>
+                <ul class="mb-0">
+                  {% for course_ref in item.associated_courses %}
+                    {% assign linked_course = site.data.courses | where: 'course_ref', course_ref | first %}
+                    {% if linked_course %}
+                      <li><a href="{{ linked_course.url | relative_url }}">{{ linked_course.name }}</a></li>
+                    {% else %}
+                      <li>{{ course_ref }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No level descriptors found for this skill.</p>
+    {% endif %}
+  </section>
+</div>

@@ -1,7 +1,7 @@
 ---
 course_ref: course-machine-readable-taxonomy
 title: Machine-Readable Taxonomy Design
-layout: page
+layout: course
 ---
 
 Course on structuring domain concepts into stable data models.

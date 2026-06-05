@@ -10,6 +10,12 @@ To create a way to represent and display skills that work for both humans and ag
 - Bootstrap
 - Bootstrap icons
 
+## Jekyll structure
+
+- Collections should be stored in a collections directory
+- Head, Footer and Navigation components should be stored as _includes
+- Use inheritance in layouts to make it easier to make wholesale changes
+
 ## Skills representation
 
 Each skills category contains:
@@ -57,3 +63,20 @@ The human-readable version will use a Bootstrap website, with branding configura
 The Jekyll _config.yml file will be kept separate from the content configuration file.
 
 Each skill and course should be individually addressable with a URL.
+
+## Navigation
+
+The site main menu should contain:
+- Home
+- Skills
+- Courses
+
+Aggregate pages for skills should show the skills grouped by category and in alphabetical order.
+
+Aggregate pages for courses should show the courses in alphabetical order.
+
+Skills and courses should contain inter-links.
+
+## Visual design
+
+- Use Bootstrap cards to display multiple skills and courses

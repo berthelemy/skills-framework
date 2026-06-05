@@ -47,12 +47,12 @@ defaults:
       path: ""
       type: skills
     values:
-      layout: page
+      layout: skill
   - scope:
       path: ""
       type: courses
     values:
-      layout: page
+      layout: course
 
 # Exclude from processing.
 # The following items will not be processed, by default.
