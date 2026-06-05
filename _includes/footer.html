@@ -1,8 +1,19 @@
 <footer class="border-top py-4 mt-4">
+  {% assign org = site.data.content.branding.organisation %}
   <div class="container small text-body-secondary">
     <div class="d-flex gap-2 align-items-center">
       <i class="bi bi-diagram-3"></i>
       <span>{{ site.data.content.branding.tag_line }}</span>
     </div>
+    {% if org and org.name %}
+      <div class="mt-2 d-flex flex-wrap gap-2 align-items-center">
+        <span>Copyright &copy; {{ "now" | date: "%Y" }}:</span>
+        {% if org.url %}
+          <a href="{{ org.url }}" target="_blank" rel="noopener noreferrer">{{ org.name }}</a>
+        {% else %}
+          <span>{{ org.name }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 </footer>

@@ -5,3 +5,8 @@ branding:
   secondary_color: "#212529"
   accent_color: "#198754"
   font_family: "system-ui, sans-serif"
+  organisation:
+    name: Skills Organisation
+    url: https://example.com
+    logo: /assets/images/logo.png
+copyright

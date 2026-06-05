@@ -77,6 +77,8 @@ Aggregate pages for courses should show the courses in alphabetical order.
 
 Skills and courses should contain inter-links.
 
+External links should open in a new tab.
+
 ## Visual design
 
 - Use Bootstrap cards to display multiple skills and courses

@@ -15,7 +15,7 @@ permalink: /courses/
           </h2>
           <p class="mb-2">{{ course.description }}</p>
           <p class="small text-body-secondary mb-2">Provider: {{ course.provider }}</p>
-          <a href="{{ course.external_url }}">Visit external course page</a>
+          <a href="{{ course.external_url }}" target="_blank" rel="noopener noreferrer">Visit external course page</a>
         </div>
       </article>
     </div>
