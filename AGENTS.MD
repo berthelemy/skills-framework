@@ -82,3 +82,29 @@ External links should open in a new tab.
 ## Visual design
 
 - Use Bootstrap cards to display multiple skills and courses
+
+## GitHub Skills
+
+All workspace GitHub skills are listed here:
+
+- [skills-machine-readable](.github/skills/skills-machine-readable/SKILL.md)
+- [wcag-aa-html](.github/skills/wcag-aa-html/SKILL.md)
+
+## Metadata Skills Used
+
+The metadata and discoverability implementation used these skills:
+
+- [skills-machine-readable](.github/skills/skills-machine-readable/SKILL.md): Used to normalize and expose structured data through consistent references, JSON outputs, and linkable entities.
+- [wcag-aa-html](.github/skills/wcag-aa-html/SKILL.md): Used as the accessibility baseline while updating metadata-bearing templates and semantic page structure.
+
+## Session Metadata Maintenance
+
+Every session must review metadata and update it if necessary.
+
+Minimum checklist per session:
+
+- Validate canonical, OpenGraph, Twitter, and JSON-LD tags in `_includes/head.html`.
+- Confirm branding and SEO defaults in `_data/content.yml` are still accurate.
+- Ensure edited content pages include appropriate front matter metadata (`description`, `og_type`, `image`).
+- Verify discoverability outputs remain valid: `llms.txt`, `robots.txt`, `skills.json`, `courses.json`, and `sitemap.xml`.
+- If no updates are needed, record that metadata was reviewed and no changes were required.
