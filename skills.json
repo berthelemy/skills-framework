@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /skills.json
+---
+{{ site.data.skills | jsonify }}

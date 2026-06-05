@@ -1,3 +1,4 @@
+home_text: This is a reference site for a skills framework that can be read easily by both humans and AI agents.
 branding:
   site_name: Skills Framework
   tag_line: Human skills modeled for people and agents
@@ -8,5 +9,8 @@ branding:
   organisation:
     name: Skills Organisation
     url: https://example.com
-    logo: /assets/images/logo.png
-copyright
+    logo: /assets/images/logo.svg
+seo:
+  default_description: Human skills modeled for people and agents.
+  default_image: /assets/images/social-card.svg
+  twitter_card: summary_large_image

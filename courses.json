@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /courses.json
+---
+{{ site.data.courses | jsonify }}

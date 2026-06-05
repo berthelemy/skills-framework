@@ -1,7 +1,10 @@
 ---
 layout: home
 title: Skills Framework
+description: Human skills modeled for people and agents.
+og_type: website
+image: /assets/images/social-card.svg
 ---
 
-This site presents a machine-readable skills framework with human-friendly pages.
+{{ site.data.content.home_text }}
 

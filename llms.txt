@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# Skills Framework
+
+This site publishes a machine-readable and human-readable skills framework.
+
+## Core Pages
+- Home: {{ '/' | absolute_url }}
+- Skills Index: {{ '/skills/' | absolute_url }}
+- Courses Index: {{ '/courses/' | absolute_url }}
+- About: {{ '/about/' | absolute_url }}
+
+## Structured Data Endpoints
+- Skills JSON: {{ '/skills.json' | absolute_url }}
+- Courses JSON: {{ '/courses.json' | absolute_url }}
+- Sitemap: {{ '/sitemap.xml' | absolute_url }}

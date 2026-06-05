@@ -1,8 +1,90 @@
+{% assign branding = site.data.content.branding %}
+{% assign seo = site.data.content.seo %}
+{% assign meta_title = page.title | default: branding.site_name %}
+{% assign meta_description = page.description | default: seo.default_description | default: branding.tag_line %}
+{% assign meta_image = page.image | default: seo.default_image | default: branding.organisation.logo %}
+{% assign canonical_url = page.url | absolute_url %}
+{% assign og_type = page.og_type | default: 'website' %}
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.content.branding.site_name }}</title>
-  <meta name="description" content="{{ site.data.content.branding.tag_line }}">
+  <title>{{ meta_title }} | {{ branding.site_name }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  <meta property="og:title" content="{{ meta_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:type" content="{{ og_type }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="{{ branding.site_name }}">
+  {% if meta_image %}
+    <meta property="og:image" content="{{ meta_image | absolute_url }}">
+  {% endif %}
+
+  <meta name="twitter:card" content="{{ seo.twitter_card | default: 'summary_large_image' }}">
+  <meta name="twitter:title" content="{{ meta_title }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  {% if meta_image %}
+    <meta name="twitter:image" content="{{ meta_image | absolute_url }}">
+  {% endif %}
+
+  {% if branding.organisation and branding.organisation.name %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": {{ branding.organisation.name | jsonify }},
+        "url": {{ branding.organisation.url | absolute_url | jsonify }},
+        "logo": {{ branding.organisation.logo | absolute_url | jsonify }}
+      }
+    </script>
+  {% endif %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ branding.site_name | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }}
+    }
+  </script>
+
+  {% if page.layout == 'course' and page.course_ref %}
+    {% assign page_course = site.data.courses | where: 'course_ref', page.course_ref | first %}
+    {% if page_course %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": {{ page_course.name | jsonify }},
+          "description": {{ page_course.description | jsonify }},
+          "provider": {
+            "@type": "Organization",
+            "name": {{ page_course.provider | jsonify }}
+          },
+          "url": {{ page.url | absolute_url | jsonify }}
+        }
+      </script>
+    {% endif %}
+  {% endif %}
+
+  {% if page.layout == 'skill' and page.skill_ref %}
+    {% assign page_skill = site.data.skills | where: 'skill_ref', page.skill_ref | first %}
+    {% if page_skill %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "DefinedTerm",
+          "name": {{ page_skill.name | jsonify }},
+          "description": {{ page_skill.description | jsonify }},
+          "termCode": {{ page_skill.skill_ref | jsonify }},
+          "url": {{ page.url | absolute_url | jsonify }}
+        }
+      </script>
+    {% endif %}
+  {% endif %}
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>

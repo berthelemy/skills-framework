@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign docs = site.pages | concat: site.skills | concat: site.courses %}
+  {% for doc in docs %}
+    {% if doc.url and doc.url != '/404.html' and doc.url != '/feed.xml' %}
+      <url>
+        <loc>{{ doc.url | absolute_url }}</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      </url>
+    {% endif %}
+  {% endfor %}
+</urlset>
