@@ -1,0 +1,68 @@
+---
+layout: null
+permalink: /search-index.json
+---
+[
+  {% assign first_doc = true %}
+
+  {% for skill_page in site.skills %}
+    {% assign skill_data = site.data.skills | where: 'skill_ref', skill_page.skill_ref | first %}
+    {% assign skill_category = site.data.categories | where: 'category_ref', skill_page.category_ref | first %}
+    {% assign skill_descriptors = site.data.level_descriptors | where: 'skill_ref', skill_page.skill_ref %}
+    {% capture descriptor_text %}
+      {% for descriptor in skill_descriptors %}
+        {{ descriptor.descriptor }}
+      {% endfor %}
+    {% endcapture %}
+    {% unless first_doc %},{% endunless %}
+    {
+      "id": {{ skill_page.url | jsonify }},
+      "type": "skill",
+      "title": {{ skill_page.title | jsonify }},
+      "url": {{ skill_page.url | relative_url | jsonify }},
+      "description": {{ skill_data.description | default: skill_page.description | default: '' | strip_html | normalize_whitespace | jsonify }},
+      "category": {{ skill_category.name | default: '' | jsonify }},
+      "body": {{ skill_page.content | markdownify | strip_html | normalize_whitespace | jsonify }},
+      "extra": {{ descriptor_text | strip_html | normalize_whitespace | jsonify }}
+    }
+    {% assign first_doc = false %}
+  {% endfor %}
+
+  {% for course_page in site.courses %}
+    {% assign course_data = site.data.courses | where: 'course_ref', course_page.course_ref | first %}
+    {% assign course_descriptors = site.data.level_descriptors | where_exp: 'd', 'd.associated_courses contains course_page.course_ref' %}
+    {% capture linked_descriptors_text %}
+      {% for descriptor in course_descriptors %}
+        {{ descriptor.descriptor }}
+      {% endfor %}
+    {% endcapture %}
+    {% unless first_doc %},{% endunless %}
+    {
+      "id": {{ course_page.url | jsonify }},
+      "type": "course",
+      "title": {{ course_page.title | jsonify }},
+      "url": {{ course_page.url | relative_url | jsonify }},
+      "description": {{ course_data.description | default: course_page.description | default: '' | strip_html | normalize_whitespace | jsonify }},
+      "provider": {{ course_data.provider | default: '' | jsonify }},
+      "body": {{ course_page.content | markdownify | strip_html | normalize_whitespace | jsonify }},
+      "extra": {{ linked_descriptors_text | strip_html | normalize_whitespace | jsonify }}
+    }
+    {% assign first_doc = false %}
+  {% endfor %}
+
+  {% for doc_page in site.pages %}
+    {% if doc_page.url contains '/docs/' %}
+      {% unless first_doc %},{% endunless %}
+      {
+        "id": {{ doc_page.url | jsonify }},
+        "type": "doc",
+        "title": {{ doc_page.title | default: doc_page.url | jsonify }},
+        "url": {{ doc_page.url | relative_url | jsonify }},
+        "description": {{ doc_page.description | default: '' | strip_html | normalize_whitespace | jsonify }},
+        "body": {{ doc_page.content | markdownify | strip_html | normalize_whitespace | jsonify }},
+        "extra": ""
+      }
+      {% assign first_doc = false %}
+    {% endif %}
+  {% endfor %}
+]

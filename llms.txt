@@ -10,9 +10,11 @@ This site publishes a machine-readable and human-readable skills framework.
 - Home: {{ '/' | absolute_url }}
 - Skills Index: {{ '/skills/' | absolute_url }}
 - Courses Index: {{ '/courses/' | absolute_url }}
+- Search: {{ '/search/' | absolute_url }}
 - About: {{ '/about/' | absolute_url }}
 
 ## Structured data endpoints
 - Skills JSON: {{ '/skills.json' | absolute_url }}
 - Courses JSON: {{ '/courses.json' | absolute_url }}
+- Search index JSON: {{ '/search-index.json' | absolute_url }}
 - Sitemap: {{ '/sitemap.xml' | absolute_url }}

@@ -18,3 +18,5 @@ seo:
   default_description: Human skills modeled for people and agents.
   default_image: /assets/images/social-card.svg
   twitter_card: summary_large_image
+search:
+  search-terms: semantic HTML, keyboard access, taxonomy # Typical search terms to suggest to users

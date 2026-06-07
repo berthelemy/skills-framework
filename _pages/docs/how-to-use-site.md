@@ -22,6 +22,7 @@ Use the website to browse:
 - Home: project overview
 - Skills: grouped by category and sorted alphabetically
 - Courses: sorted alphabetically
+- Search: keyword search across skills, courses, and docs
 - Skill pages: detailed level descriptors and linked courses
 - Course pages: course details and linked skill levels
 
@@ -30,6 +31,7 @@ Navigation is available in the top menu:
 - Home
 - Skills
 - Courses
+- Search
 
 ## For machines and ai agents
 
@@ -40,6 +42,7 @@ This framework is designed for structured consumption with:
 - Machine-readable endpoints:
   - `/skills.json`
   - `/courses.json`
+  - `/search-index.json`
 - Discoverability files:
   - `/llms.txt`
   - `/robots.txt`

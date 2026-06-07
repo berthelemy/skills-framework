@@ -5,6 +5,7 @@
 {% assign meta_image = page.image | default: seo.default_image | default: branding.organisation.logo %}
 {% assign canonical_url = page.url | absolute_url %}
 {% assign og_type = page.og_type | default: 'website' %}
+{% capture search_target_template %}{{ '/search/?q=' | absolute_url }}{% raw %}{search_term_string}{% endraw %}{% endcapture %}
 
 <head>
   <meta charset="utf-8">
@@ -46,7 +47,12 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": {{ branding.site_name | jsonify }},
-      "url": {{ '/' | absolute_url | jsonify }}
+      "url": {{ '/' | absolute_url | jsonify }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ search_target_template | jsonify }},
+        "query-input": "required name=search_term_string"
+      }
     }
   </script>
 
@@ -157,6 +163,13 @@
     .card-elevated {
       border: 1px solid rgba(0, 0, 0, 0.08);
       box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.06);
+    }
+
+    mark.search-hit {
+      background-color: color-mix(in srgb, var(--brand-accent) 24%, white);
+      color: inherit;
+      padding: 0 0.1rem;
+      border-radius: 0.15rem;
     }
 
     .fork-me-ribbon {
