@@ -7,6 +7,10 @@ image: /assets/images/social-card.svg
 permalink: /docs/
 ---
 
+This documentation includes instructions for both site developers and also for site users.
+
+Feel free to remove pages
+
 Use this page as a starting point for project documentation.
 
 - Site usage (human + machine): [How to use this site]({% link _pages/docs/how-to-use-site.md %})
