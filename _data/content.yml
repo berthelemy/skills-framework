@@ -1,10 +1,12 @@
-home_text: This is a reference site for a skills framework that can be read easily by both humans and AI agents.
+# This file contains user-adjustable site-wide variables and settings for the Jekyll site. These variables can be accessed in templates and pages using the `site` object, e.g., `{{ site.title }}`.
+# They sit separately from the _config.yml file to allow changes to content with less risk of breaking site configuration.
+home_text: This reference site shows how we can develop a skills framework that can be read easily by both humans and AI agents.
 branding:
-  site_name: Skills Framework
-  tag_line: Human skills modeled for people and agents
-  primary_color: "#0d6efd"
+  site_name: Skills Framework sample site
+  tag_line: Human skills in a machine-readable format
+  primary_color: "#fd6efd"
   secondary_color: "#212529"
-  accent_color: "#198754"
+  accent_color: "#190754"
   font_family: "system-ui, sans-serif"
   organisation:
     name: Skills Organisation
