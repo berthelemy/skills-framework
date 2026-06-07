@@ -10,7 +10,20 @@
         <li class="nav-item"><a class="nav-link" href="{{ '/about' | relative_url }}">About</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ '/skills/' | relative_url }}">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ '/courses/' | relative_url }}">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ '/docs/' | relative_url }}">Docs</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{ '/docs/' | relative_url }}" id="docsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Documentation
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="docsDropdown">
+            <li><a class="dropdown-item" href="{{ '/docs/' | relative_url }}">Documentation home</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% link _pages/docs/how-to-use-site.md %}">How to use this site</a></li>
+            <li><a class="dropdown-item" href="{% link _pages/docs/content-configuration.md %}">Content configuration</a></li>
+            <li><a class="dropdown-item" href="{% link _pages/docs/add-skills-and-courses.md %}">Add skills and courses</a></li>
+            <li><a class="dropdown-item" href="{% link _pages/docs/github-pages-deployment.md %}">Github pages deployment</a></li>
+            <li><a class="dropdown-item" href="{% link _pages/docs/agent-prompts.md %}">Agent prompt templates</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>

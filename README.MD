@@ -44,11 +44,11 @@ bundle exec jekyll serve
 
 ## Documentation
 
-- Site usage (human + machine): [How to use this site]({% link docs/how-to-use-site.md %})
-- Whole-site content configuration (`content.yaml` equivalent): [Content configuration]({% link docs/content-configuration.md %})
-- Add skills and courses: [Add skills and courses]({% link docs/add-skills-and-courses.md %})
-- GitHub pages deployment: [Github pages deployment]({% link docs/github-pages-deployment.md %})
-- Interactive agent prompt templates: [Agent prompt templates]({% link docs/agent-prompts.md %})
+- Site usage (human + machine): [How to use this site]({% link _pages/docs/how-to-use-site.md %})
+- Whole-site content configuration (`content.yaml` equivalent): [Content configuration]({% link _pages/docs/content-configuration.md %})
+- Add skills and courses: [Add skills and courses]({% link _pages/docs/add-skills-and-courses.md %})
+- GitHub pages deployment: [Github pages deployment]({% link _pages/docs/github-pages-deployment.md %})
+- Interactive agent prompt templates: [Agent prompt templates]({% link _pages/docs/agent-prompts.md %})
 
 ## Related project guidance
 
