@@ -54,3 +54,24 @@ Run:
 ```
 
 This verifies metadata tags, generated machine-readable artifacts, and build integrity.
+
+## Glossary definitions
+
+The site supports an inline glossary driven by [_data/glossary.csv](/_data/glossary.csv).
+
+The CSV must include these headers:
+
+- `item`
+- `definition`
+
+Behavior:
+
+- On each page, the first occurrence of a glossary `item` is highlighted with a dotted underline.
+- Clicking the highlighted term opens a modal with the matching `definition`.
+
+Example row:
+
+```csv
+item,definition
+taxonomy,"A classification structure used to organize related concepts."
+```

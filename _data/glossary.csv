@@ -1,0 +1,4 @@
+item,definition
+skills framework,"A structured model that defines skills, levels, and related learning content."
+level descriptor,"A statement describing expected capability and responsibility at a specific level."
+machine-readable,"Formatted so software and agents can reliably parse and process the content."
