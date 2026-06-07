@@ -92,16 +92,32 @@
       --brand-primary: {{ site.data.content.branding.primary_color }};
       --brand-secondary: {{ site.data.content.branding.secondary_color }};
       --brand-accent: {{ site.data.content.branding.accent_color }};
+      --brand-link: {{ site.data.content.branding.link_color | default: site.data.content.branding.accent_color }};
+      --brand-link-hover: {{ site.data.content.branding.link_hover_color | default: site.data.content.branding.primary_color }};
+      --brand-link-visited: {{ site.data.content.branding.link_visited_color | default: site.data.content.branding.link_color | default: site.data.content.branding.accent_color }};
       --brand-font: {{ site.data.content.branding.font_family }};
       --bs-primary: var(--brand-primary);
-      --bs-link-color: var(--brand-accent);
-      --bs-link-hover-color: var(--brand-primary);
+      --bs-link-color: var(--brand-link);
+      --bs-link-hover-color: var(--brand-link-hover);
       --bs-focus-ring-color: var(--brand-accent);
     }
 
     body {
       font-family: var(--brand-font);
       color: var(--brand-secondary);
+    }
+
+    a:not(.btn) {
+      color: var(--brand-link);
+    }
+
+    a:not(.btn):visited {
+      color: var(--brand-link-visited);
+    }
+
+    a:not(.btn):hover,
+    a:not(.btn):focus {
+      color: var(--brand-link-hover);
     }
 
     .hero {

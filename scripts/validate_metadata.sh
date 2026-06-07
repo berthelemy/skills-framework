@@ -31,6 +31,10 @@ require 'yaml'
 content = YAML.load_file('_data/content.yml') || {}
 branding = content['branding'] || {}
 
+link_color = branding.fetch('link_color', branding['accent_color'])
+link_hover_color = branding.fetch('link_hover_color', branding['primary_color'])
+link_visited_color = branding.fetch('link_visited_color', link_color)
+
 def parse_hex_color(value, key)
   str = value.to_s.strip
   unless str.match?(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/)
@@ -73,7 +77,10 @@ end
 white = [255, 255, 255]
 checks = [
   ['branding.primary_color', branding['primary_color'], white, 4.5, 'primary button text against white page context'],
-  ['branding.accent_color', branding['accent_color'], white, 4.5, 'link text against white page background'],
+  ['branding.accent_color', branding['accent_color'], white, 4.5, 'accent text against white page background'],
+  ['branding.link_color', link_color, white, 4.5, 'link text against white page background'],
+  ['branding.link_hover_color', link_hover_color, white, 4.5, 'link hover text against white page background'],
+  ['branding.link_visited_color', link_visited_color, white, 4.5, 'visited link text against white page background'],
   ['branding.secondary_color', branding['secondary_color'], white, 4.5, 'body text against white page background']
 ]
 

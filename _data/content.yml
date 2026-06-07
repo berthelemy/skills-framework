@@ -4,14 +4,17 @@ home_text: This reference site shows how we can develop a skills framework that 
 branding:
   site_name: Skills Framework sample site
   tag_line: Human skills in a machine-readable format
-  primary_color: "#fd6efd"
-  secondary_color: "#212529"
-  accent_color: "#190754"
+  primary_color: "#146E6D"
+  secondary_color: "#1F2933"
+  accent_color: "#0F5656"
+  link_color: "#0F5656"
+  link_hover_color: "#0A4242"
+  link_visited_color: "#083737"
   font_family: "system-ui, sans-serif"
   organisation:
-    name: Skills Organisation
-    url: https://example.com
-    logo: /assets/images/logo.svg
+    name: Mark Berthelemy Consulting
+    url: https://consulting.berthelemy.net
+    logo: /assets/images/mb-logo-transp-300.png
 seo:
   default_description: Human skills modeled for people and agents.
   default_image: /assets/images/social-card.svg

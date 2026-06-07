@@ -12,6 +12,7 @@ This project uses a whole-site configuration data file for branding and metadata
   - site name
   - tag line
   - primary/secondary/accent colors
+  - link colors (`link_color`, `link_hover_color`, `link_visited_color`)
   - font family
 - Organization details:
   - name
@@ -53,4 +54,7 @@ bundle exec jekyll build
 
 - `branding.primary_color`
 - `branding.accent_color`
+- `branding.link_color`
+- `branding.link_hover_color`
+- `branding.link_visited_color`
 - `branding.secondary_color`
