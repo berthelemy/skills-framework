@@ -17,23 +17,20 @@ We have provided the ability to add references to courses. These are linked to s
 
 ## How humans will use the site
 
-Use the website to browse:
+The site can be browsed directly, or users can search for specific terms.
 
-- Home: project overview
-- Skills: grouped by category and sorted alphabetically
-- Courses: sorted alphabetically
-- Search: keyword search across skills, courses, and docs
-- Skill pages: detailed level descriptors and linked courses
-- Course pages: course details and linked skill levels
+Key pages:
 
-Navigation is available in the top menu:
+- [Skills](/skills)
+- [Courses](/courses)
+- [Search](/search)
+- [Documentation](/docs)
 
-- Home
-- Skills
-- Courses
-- Search
+## For machines and AI agents
 
-## For machines and ai agents
+All the skills and courses are designed to be consumed easily by machines.
+
+You can point the machine to the markdown files directly.
 
 This framework is designed for structured consumption with:
 
