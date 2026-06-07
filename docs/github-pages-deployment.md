@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # Github pages deployment
 
 This repository includes a deployment workflow:

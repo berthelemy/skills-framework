@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # Whole-site content configuration
 
 This project uses a whole-site configuration data file for branding and metadata defaults.

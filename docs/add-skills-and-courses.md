@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # Add skills and courses
 
 ## 1. Update data files

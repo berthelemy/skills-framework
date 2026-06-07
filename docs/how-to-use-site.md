@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # How to use this site
 
 ## For humans

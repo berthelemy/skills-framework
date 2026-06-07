@@ -1,4 +1,7 @@
-# Skills framework
+---
+layout: page
+---
+# README
 
 A Jekyll + Bootstrap framework for publishing skills content that works for both humans and machines.
 
@@ -41,11 +44,11 @@ bundle exec jekyll serve
 
 ## Documentation
 
-- Site usage (human + machine): [docs/how-to-use-site.md](docs/how-to-use-site.md)
-- Whole-site content configuration (`content.yaml` equivalent): [docs/content-configuration.md](docs/content-configuration.md)
-- Add skills and courses: [docs/add-skills-and-courses.md](docs/add-skills-and-courses.md)
-- GitHub Pages deployment: [docs/github-pages-deployment.md](docs/github-pages-deployment.md)
-- Interactive agent prompt templates: [docs/agent-prompts.md](docs/agent-prompts.md)
+- Site usage (human + machine): [How to use this site]({% link docs/how-to-use-site.md %})
+- Whole-site content configuration (`content.yaml` equivalent): [Content configuration]({% link docs/content-configuration.md %})
+- Add skills and courses: [Add skills and courses]({% link docs/add-skills-and-courses.md %})
+- GitHub pages deployment: [Github pages deployment]({% link docs/github-pages-deployment.md %})
+- Interactive agent prompt templates: [Agent prompt templates]({% link docs/agent-prompts.md %})
 
 ## Related project guidance
 

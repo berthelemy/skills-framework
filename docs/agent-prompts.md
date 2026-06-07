@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # Agent prompt templates
 
 ## Interactive prompt: add a skill with associated data
