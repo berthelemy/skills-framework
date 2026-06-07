@@ -32,5 +32,14 @@ layout: default
         </div>
       </article>
     </div>
+    <div class="col-md-6">
+      <article class="card card-elevated h-100">
+        <div class="card-body">
+          <h2 class="h5 card-title">Courses</h2>
+          <p class="card-text">{{ site.data.courses | size }} linked learning resources.</p>
+          <a class="stretched-link" href="{{ '/courses/' | relative_url }}">View all courses</a>
+        </div>
+      </article>
+    </div>
   </div>
 </div>

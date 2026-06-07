@@ -107,16 +107,16 @@
       color: var(--brand-secondary);
     }
 
-    a:not(.btn) {
+    a:not(.btn):not(.fork-me-ribbon) {
       color: var(--brand-link);
     }
 
-    a:not(.btn):visited {
+    a:not(.btn):not(.fork-me-ribbon):visited {
       color: var(--brand-link-visited);
     }
 
-    a:not(.btn):hover,
-    a:not(.btn):focus {
+    a:not(.btn):not(.fork-me-ribbon):hover,
+    a:not(.btn):not(.fork-me-ribbon):focus {
       color: var(--brand-link-hover);
     }
 
@@ -152,6 +152,53 @@
     .card-elevated {
       border: 1px solid rgba(0, 0, 0, 0.08);
       box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.06);
+    }
+
+    .fork-me-ribbon {
+      position: fixed;
+      right: -66px;
+      bottom: 56px;
+      z-index: 1040;
+      transform-origin: center;
+      transform: rotate(-45deg);
+      background: var(--brand-secondary);
+      color: #ffffff;
+      width: 260px;
+      padding: 0.5rem 0;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: 1.2;
+      white-space: nowrap;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+      box-shadow: 0 0.35rem 0.8rem rgba(0, 0, 0, 0.25);
+      border: 1px solid color-mix(in srgb, var(--brand-secondary) 75%, white);
+    }
+
+    .fork-me-ribbon:hover,
+    .fork-me-ribbon:focus,
+    .fork-me-ribbon:visited {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .fork-me-ribbon:hover,
+    .fork-me-ribbon:focus {
+      background: var(--brand-primary);
+      border-color: var(--brand-primary);
+    }
+
+    @media (max-width: 575.98px) {
+      .fork-me-ribbon {
+        right: -76px;
+        bottom: 48px;
+        width: 240px;
+        font-size: 0.72rem;
+      }
     }
   </style>
 </head>
