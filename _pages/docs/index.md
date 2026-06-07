@@ -1,20 +1,38 @@
 ---
 layout: page
 title: Documentation
-description: Browse documentation for using, configuring, and extending the skills framework site.
+description: Instructions for both site developers and site users
 og_type: website
 image: /assets/images/social-card.svg
 permalink: /docs/
 ---
 
-This documentation includes instructions for both site developers and also for site users.
+Feel free to remove pages from the docs folder before you publish for your community. But don't forget to also remove the links from `_data/navigation.yml`
 
-Feel free to remove pages
+Use this page as a starting point for your own project documentation.
 
-Use this page as a starting point for project documentation.
+## [How to use this site]({% link _pages/docs/how-to-use-site.md %})
 
-- Site usage (human + machine): [How to use this site]({% link _pages/docs/how-to-use-site.md %})
-- Whole-site content configuration: [Content configuration]({% link _pages/docs/content-configuration.md %})
-- Add skills and courses: [Add skills and courses]({% link _pages/docs/add-skills-and-courses.md %})
-- Github pages deployment: [Github pages deployment]({% link _pages/docs/github-pages-deployment.md %})
-- Interactive agent prompt templates: [Agent prompt templates]({% link _pages/docs/agent-prompts.md %})
+Instructions for usage by both humans and AI agents
+
+## [Introduction for site developers]({% link _pages/docs/intro-site-developers.md %})
+
+How to get started using the site-generation platform, Jekyll
+
+## [Whole site configuration]({% link _pages/docs/content-configuration.md %})
+
+How to set up branding, colours and site-wide text
+
+## [Add skills and courses]({% link _pages/docs/add-skills-and-courses.md %})
+
+How to add skills and related courses
+
+## [Agent prompt templates]({% link _pages/docs/agent-prompts.md %})
+
+How to prompt your AI agent to help you add skills and courses
+
+## [Github pages deployment]({% link _pages/docs/github-pages-deployment.md %})
+
+How to make your site available to the public on Github Pages (currently free)
+
+
