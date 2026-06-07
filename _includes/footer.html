@@ -2,18 +2,19 @@
   {% assign org = site.data.content.branding.organisation %}
   <div class="container small text-body-secondary">
     {% if org and org.name %}
-      <div class="mt-2 d-flex flex-wrap gap-2 align-items-center">
-        <span>Copyright &copy; {{ "now" | date: "%Y" }}:</span>
+      <div class="mt-2 ">
+        <p class="text-center">Content copyright &copy; {{ "now" | date: "%Y" }}:
         {% if org.url %}
           <a href="{{ org.url }}" target="_blank" rel="noopener noreferrer">{{ org.name }}</a>
         {% else %}
-          <span>{{ org.name }}</span>
+          {{ org.name }}</p>
         {% endif %}
+        
       </div>
     {% endif %}
-      <div class="mt-2 d-flex flex-wrap gap-2 align-items-center">
-        <p class="text-center">Based on an original reference model from <a href="https://consulting.berthelemy.net" target="_blank">Mark Berthelemy Consulting</a></p>
-        <p class="text-center"><img src="/assets/images/mb-logo-transp-300.png" style="height: 50px" alt="Mark Berthelemy Consulting logo" /></p>
+      <div class="mt-2 align-items-center justify-content-center">
+        <p class="text-center">Based on an original reference model from <a href="https://consulting.berthelemy.net" target="_blank">Mark Berthelemy Consulting</a> and available on <a href="https://github.com/berthelemy/skills-framework" target="_blank">GitHub</a></p>
+        <p class="text-center"><a href="https://consulting.berthelemy.net" target="_blank" data-external-link-decorated="true"><img src="/assets/images/mb-logo-transp-300.png" style="height: 50px" alt="Mark Berthelemy Consulting logo" /></a></p>
       </div>
   </div>
 </footer>
