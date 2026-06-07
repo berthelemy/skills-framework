@@ -2,7 +2,7 @@
 # They sit separately from the _config.yml file to allow changes to content with less risk of breaking site configuration.
 home_text: This reference site shows how we can develop a skills framework that can be read easily by both humans and AI agents.
 branding:
-  site_name: Skills Framework sample site
+  site_name: Skills Framework Reference Site
   tag_line: Human skills in a machine-readable format
   primary_color: "#146E6D"
   secondary_color: "#1F2933"
@@ -12,9 +12,8 @@ branding:
   link_visited_color: "#083737"
   font_family: "system-ui, sans-serif"
   organisation:
-    name: Mark Berthelemy Consulting
-    url: https://consulting.berthelemy.net
-    logo: /assets/images/mb-logo-transp-300.png
+    name: Your Organization Name
+    url: https://example.com
 seo:
   default_description: Human skills modeled for people and agents.
   default_image: /assets/images/social-card.svg
