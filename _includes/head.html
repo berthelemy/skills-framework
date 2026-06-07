@@ -93,6 +93,10 @@
       --brand-secondary: {{ site.data.content.branding.secondary_color }};
       --brand-accent: {{ site.data.content.branding.accent_color }};
       --brand-font: {{ site.data.content.branding.font_family }};
+      --bs-primary: var(--brand-primary);
+      --bs-link-color: var(--brand-accent);
+      --bs-link-hover-color: var(--brand-primary);
+      --bs-focus-ring-color: var(--brand-accent);
     }
 
     body {
@@ -101,8 +105,23 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(25, 135, 84, 0.08));
+      background: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--brand-primary) 12%, white),
+        color-mix(in srgb, var(--brand-accent) 10%, white)
+      );
       border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-primary {
+      background-color: var(--brand-primary);
+      border-color: var(--brand-primary);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: var(--brand-accent);
+      border-color: var(--brand-accent);
     }
 
     .navbar-brand {

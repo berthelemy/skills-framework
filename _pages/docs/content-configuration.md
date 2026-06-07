@@ -32,6 +32,8 @@ Values from `_data/content.yml` are used by templates and metadata includes, inc
 
 Keeping this file accurate ensures consistent branding and high-quality metadata across the entire site.
 
+Branding colors must also remain accessible: configured text/link colors are validated against a white background using WCAG 2.2 AA contrast thresholds.
+
 ## Recommended update process
 
 1. Edit `_data/content.yml`.
@@ -46,3 +48,9 @@ bundle exec jekyll build
 ```bash
 ./scripts/validate_metadata.sh
 ```
+
+4. If you changed colors, ensure the script passes color contrast checks for:
+
+- `branding.primary_color`
+- `branding.accent_color`
+- `branding.secondary_color`

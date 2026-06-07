@@ -13,5 +13,50 @@
     {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script>
+        // Checks for external links and adds appropriate attributes and icons
+        document.addEventListener('DOMContentLoaded', () => {
+          const currentOrigin = window.location.origin;
+
+          document.querySelectorAll('a[href]').forEach((link) => {
+            if (link.dataset.externalLinkDecorated === 'true') {
+              return;
+            }
+
+            let targetUrl;
+
+            try {
+              targetUrl = new URL(link.getAttribute('href'), window.location.href);
+            } catch (error) {
+              return;
+            }
+
+            const isExternal = targetUrl.origin !== currentOrigin;
+            const isWebProtocol = targetUrl.protocol === 'http:' || targetUrl.protocol === 'https:';
+
+            if (!isExternal || !isWebProtocol) {
+              return;
+            }
+
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.dataset.externalLinkDecorated = 'true';
+
+            if (link.querySelector('.external-link-icon')) {
+              return;
+            }
+
+            const icon = document.createElement('i');
+            icon.className = 'bi bi-box-arrow-up-right ms-1 external-link-icon';
+            icon.setAttribute('aria-hidden', 'true');
+            link.appendChild(icon);
+
+            const hiddenLabel = document.createElement('span');
+            hiddenLabel.className = 'visually-hidden';
+            hiddenLabel.textContent = ' Opens in a new window.';
+            link.appendChild(hiddenLabel);
+          });
+        });
+      </script>
   </body>
 </html>

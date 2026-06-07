@@ -106,6 +106,7 @@ Minimum checklist per session:
 
 - Validate canonical, OpenGraph, Twitter, and JSON-LD tags in `_includes/head.html`.
 - Confirm branding and SEO defaults in `_data/content.yml` are still accurate.
+- If branding colors are updated in `_data/content.yml`, run `./scripts/validate_metadata.sh` and verify WCAG 2.2 AA color contrast checks pass.
 - Ensure edited content pages include appropriate front matter metadata (`description`, `og_type`, `image`).
 - Verify discoverability outputs remain valid: `llms.txt`, `robots.txt`, `skills.json`, `courses.json`, and `sitemap.xml`.
 - If no updates are needed, record that metadata was reviewed and no changes were required.
