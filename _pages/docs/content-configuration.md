@@ -58,3 +58,26 @@ bundle exec jekyll build
 - `branding.link_hover_color`
 - `branding.link_visited_color`
 - `branding.secondary_color`
+
+
+
+## Glossary definitions
+
+The site supports an inline glossary driven by [_data/glossary.csv](/_data/glossary.csv).
+
+The CSV must include these headers:
+
+- `item`
+- `definition`
+
+Behavior:
+
+- On each page, the first occurrence of a glossary `item` is highlighted with a dotted underline.
+- Clicking the highlighted term opens a modal with the matching `definition`.
+
+Example row:
+
+```csv
+item,definition
+taxonomy,"A classification structure used to organize related concepts."
+```

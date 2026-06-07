@@ -30,12 +30,12 @@ Key pages:
 
 All the skills and courses are designed to be consumed easily by machines.
 
-You can point the machine to the markdown files directly.
+You can point the machine to the markdown files directly in your own repository.
 
-This framework is designed for structured consumption with:
+The site includes special features to enable machines to walk through and gather the information:
 
 - Stable URLs for skill and course pages
-- Canonical, OpenGraph, Twitter, and JSON-LD metadata
+- Canonical, Twitter, OpenGraph and JSON-LD metadata
 - Machine-readable endpoints:
   - `/skills.json`
   - `/courses.json`
@@ -45,33 +45,4 @@ This framework is designed for structured consumption with:
   - `/robots.txt`
   - `/sitemap.xml`
 
-## Validate output locally
-
-Run:
-
-```bash
-./scripts/validate_metadata.sh
-```
-
-This verifies metadata tags, generated machine-readable artifacts, and build integrity.
-
-## Glossary definitions
-
-The site supports an inline glossary driven by [_data/glossary.csv](/_data/glossary.csv).
-
-The CSV must include these headers:
-
-- `item`
-- `definition`
-
-Behavior:
-
-- On each page, the first occurrence of a glossary `item` is highlighted with a dotted underline.
-- Clicking the highlighted term opens a modal with the matching `definition`.
-
-Example row:
-
-```csv
-item,definition
-taxonomy,"A classification structure used to organize related concepts."
-```
+You don't need to worry about these. They are all generated automatically, and agents will know what to do with them.

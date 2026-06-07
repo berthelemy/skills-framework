@@ -1,5 +1,6 @@
 # This file contains user-adjustable site-wide variables and settings for the Jekyll site. These variables can be accessed in templates and pages using the `site` object, e.g., `{{ site.title }}`.
 # They sit separately from the _config.yml file to allow changes to content with less risk of breaking site configuration.
+
 home_text: This reference site shows how we can develop a skills framework that can be read easily by both humans and AI agents.
 branding:
   site_name: Skills Framework Reference Site
