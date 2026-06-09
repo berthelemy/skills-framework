@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: docs
+sort_order: 2
+title: Introduction for site developers
+description: How to get started using the Jekyll site-generation platform
 ---
-# Introduction for site developers
 
 ## Validate output locally
 
@@ -12,3 +14,4 @@ Run:
 ```
 
 This verifies metadata tags, generated machine-readable artifacts, and build integrity.
+

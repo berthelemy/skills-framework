@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: docs
+title: How to add skills and courses
+description: How to add skills and related courses
+sort_order: 4
 ---
-# Add skills and courses
-
 ## 1. Update data files
 
 Edit `_data/` files as needed:
@@ -65,3 +66,4 @@ Run:
 ```bash
 ./scripts/validate_metadata.sh
 ```
+

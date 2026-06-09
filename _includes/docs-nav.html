@@ -1,0 +1,15 @@
+{% assign url_parts = page.url | split: '/' %}
+{% assign section_path = '/' | append: url_parts[1] | append: '/' %}
+{% assign sibling_pages = site.pages | where_exp: "p", "p.url != page.url and p.url contains section_path and p.title != 'Documentation index'" | sort: "sort_order" %}
+
+{% if sibling_pages.size > 0 %}
+<nav aria-label="Other pages in this section" class="mt-4">
+  <h2 class="h5">Other documentation</h2>
+  <ul class="list-unstyled m-0 p-0">
+    {% for sibling in sibling_pages %}
+      {% assign sibling_label = sibling.title | default: sibling.name | replace: '.md', '' | replace: '.markdown', '' | replace: '-', ' ' | capitalize %}
+      <li class="m-0 p-0 py-2"><a class="m-0 p-0 d-inline" href="{{ sibling.url | relative_url }}" title="{{ sibling.description }}">{{ sibling_label }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}

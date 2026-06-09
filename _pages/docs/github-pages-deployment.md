@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: docs
+title: Github pages deployment
+description: How to make your site available to the public on Github Pages (currently free)
+sort_order: 6
 ---
-# Github pages deployment
-
 This repository includes a deployment workflow:
 
 - `.github/workflows/deploy-pages.yml`

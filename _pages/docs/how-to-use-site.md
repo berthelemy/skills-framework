@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: docs
+title: How to use this site
+description: Instructions for usage by both humans and AI agents
+sort_order: 1
 ---
-# How to use this site
-
 The published website produced by this framework is designed to allow both humans and machines (AI agents particularly) to read and navigate the skills.
 
 ## Structure
@@ -46,3 +47,4 @@ The site includes special features to enable machines to walk through and gather
   - `/sitemap.xml`
 
 You don't need to worry about these. They are all generated automatically, and agents will know what to do with them.
+

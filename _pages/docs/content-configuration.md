@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: docs
+sort_order: 3
+title: Whole site configuration
+description: How to set up branding, colours and site-wide text
 ---
-# Whole-site content configuration
 
 This project uses a whole-site configuration data file for branding and metadata defaults.
 

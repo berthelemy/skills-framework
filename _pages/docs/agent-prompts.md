@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: docs
+title: Agent prompt templates
+description: How to prompt your AI agent to help you add skills and courses
+sort_order: 5
 ---
-# Agent prompt templates
-
 ## Interactive prompt: add a skill with associated data
 
 ```text
@@ -52,3 +53,4 @@ Output:
 - Files changed
 - Validation result
 ```
+
