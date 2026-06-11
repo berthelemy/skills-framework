@@ -21,3 +21,5 @@ seo:
   twitter_card: summary_large_image
 search:
   search-terms: semantic HTML, keyboard access, taxonomy # Typical search terms to suggest to users
+configuration:
+  alert_message: true # Set to 'false' to hide the alert message at the top of the page

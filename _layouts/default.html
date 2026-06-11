@@ -3,10 +3,11 @@
   {% include head.html %}
   <body>
     <a class="visually-hidden-focusable position-absolute top-0 start-0 p-2 bg-white border" href="#main-content">Skip to main content</a>
-
+    {% include alert.html %}
     {% include navigation.html %}
 
     <main id="main-content" class="py-4">
+      
       {{ content }}
     </main>
 

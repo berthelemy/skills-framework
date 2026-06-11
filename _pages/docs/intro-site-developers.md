@@ -2,6 +2,7 @@
 layout: docs
 sort_order: 2
 title: Introduction for site developers
+audience: developers
 description: How to get started using the Jekyll site-generation platform
 ---
 
