@@ -2,4 +2,5 @@
 layout: null
 permalink: /skills.json
 ---
-{{ site.data.skills | jsonify }}
+{% assign skills_metadata = site.skills | map: 'metadata' %}
+{{ skills_metadata | jsonify }}

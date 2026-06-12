@@ -6,24 +6,16 @@ permalink: /search-index.json
   {% assign first_doc = true %}
 
   {% for skill_page in site.skills %}
-    {% assign skill_data = site.data.skills | where: 'skill_ref', skill_page.skill_ref | first %}
-    {% assign skill_category = site.data.categories | where: 'category_ref', skill_page.category_ref | first %}
-    {% assign skill_descriptors = site.data.level_descriptors | where: 'skill_ref', skill_page.skill_ref %}
-    {% capture descriptor_text %}
-      {% for descriptor in skill_descriptors %}
-        {{ descriptor.descriptor }}
-      {% endfor %}
-    {% endcapture %}
     {% unless first_doc %},{% endunless %}
     {
       "id": {{ skill_page.url | jsonify }},
       "type": "skill",
       "title": {{ skill_page.title | jsonify }},
       "url": {{ skill_page.url | relative_url | jsonify }},
-      "description": {{ skill_data.description | default: skill_page.description | default: '' | strip_html | normalize_whitespace | jsonify }},
-      "category": {{ skill_category.name | default: '' | jsonify }},
+      "description": {{ skill_page.description | default: '' | strip_html | normalize_whitespace | jsonify }},
+      "category": {{ skill_page.category | default: '' | jsonify }},
       "body": {{ skill_page.content | markdownify | strip_html | normalize_whitespace | jsonify }},
-      "extra": {{ descriptor_text | strip_html | normalize_whitespace | jsonify }}
+      "extra": {{ skill_page.level_descriptors | join: ' ' | strip_html | normalize_whitespace | jsonify }}
     }
     {% assign first_doc = false %}
   {% endfor %}

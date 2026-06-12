@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
-{% assign skill = site.data.skills | where: 'skill_ref', page.skill_ref | first %}
-{% assign category = site.data.categories | where: 'category_ref', page.category_ref | first %}
-{% assign descriptors = site.data.level_descriptors | where: 'skill_ref', page.skill_ref | sort: 'level_number' %}
+{% comment %}
+  We sort the level descriptors that live natively in this file's front matter.
+  We use the new key 'level' instead of 'level_number'.
+{% endcomment %}
+{% assign descriptors = page.level_descriptors | sort: 'level' %}
 
 <div class="container">
   <nav aria-label="breadcrumb" class="mb-3">
@@ -16,9 +18,10 @@ layout: default
 
   <header class="mb-4">
     <h1 class="h2 mb-2">{{ page.title }}</h1>
-    <p class="text-body-secondary mb-1">{{ skill.description }}</p>
-    {% if category %}
-      <span class="badge text-bg-light border">Category: {{ category.name }}</span>
+    <p class="text-body-secondary mb-1">{{ page.description }}</p>
+    {% if page.category %}
+      {% comment %} Pulls the category string directly from front matter {% endcomment %}
+      <span class="badge text-bg-light border">Category: {{ page.category }}</span>
     {% endif %}
   </header>
 
@@ -34,21 +37,27 @@ layout: default
     {% if descriptors and descriptors.size > 0 %}
       <div class="list-group">
         {% for item in descriptors %}
-          {% assign level = site.data.levels | where: 'level_number', item.level_number | first %}
           <article class="list-group-item">
             <div class="d-flex justify-content-between flex-wrap gap-2 mb-1">
-              <strong>Level {{ item.level_number }}{% if level %}: {{ level.title }}{% endif %}</strong>
+              {% comment %} Uses the new nested structure 'item.level' {% endcomment %}
+              <strong>Level {{ item.level }}</strong>
               <span class="text-body-secondary small">{{ page.skill_ref }}</span>
             </div>
-            <p class="mb-2">{{ item.descriptor }}</p>
+            {% comment %} Uses the new nested structure 'item.text' {% endcomment %}
+            <p class="mb-2">{{ item.text }}</p>
+            
             {% if item.associated_courses and item.associated_courses.size > 0 %}
               <div>
                 <span class="small text-body-secondary">Associated courses:</span>
                 <ul class="mb-0">
                   {% for course_ref in item.associated_courses %}
-                    {% assign linked_course = site.data.courses | where: 'course_ref', course_ref | first %}
+                    {% assign linked_course = site.courses | where: 'course_ref', course_ref | first %}
                     {% if linked_course %}
-                      <li><a href="{{ linked_course.url | relative_url }}">{{ linked_course.name }}</a></li>
+                      <li>
+                        <a href="{{ linked_course.url | relative_url }}">
+                          {{ linked_course.title }}
+                        </a>
+                      </li>
                     {% else %}
                       <li>{{ course_ref }}</li>
                     {% endif %}

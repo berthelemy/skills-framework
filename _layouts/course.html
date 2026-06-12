@@ -1,8 +1,16 @@
 ---
 layout: default
 ---
-{% assign course = site.data.courses | where: 'course_ref', page.course_ref | first %}
-{% assign related_descriptors = site.data.level_descriptors | where_exp: 'd', 'd.associated_courses contains page.course_ref' %}
+{% comment %}
+  Loop through all skills to build an array of skills associated with this course reference.
+{% endcomment %}
+{% assign related_skills = "" | split: "," %}
+{% for skill in site.skills %}
+  {% assign match = skill.level_descriptors | where_exp: "d", "d.associated_courses contains page.course_ref" %}
+  {% if match.size > 0 %}
+    {% assign related_skills = related_skills | push: skill %}
+  {% endif %}
+{% endfor %}
 
 <div class="container">
   <nav aria-label="breadcrumb" class="mb-3">
@@ -15,7 +23,7 @@ layout: default
 
   <header class="mb-4">
     <h1 class="h2 mb-2">{{ page.title }}</h1>
-    <p class="text-body-secondary mb-0">{{ course.description }}</p>
+    <p class="text-body-secondary mb-0">{{ page.description }}</p>
   </header>
 
   <section class="card card-elevated mb-4">
@@ -26,31 +34,38 @@ layout: default
         <dd class="col-sm-9"><code>{{ page.course_ref }}</code></dd>
 
         <dt class="col-sm-3">Provider</dt>
-        <dd class="col-sm-9">{{ course.provider }}</dd>
+        <dd class="col-sm-9">{{ page.provider }}</dd>
 
         <dt class="col-sm-3">External URL</dt>
-        <dd class="col-sm-9"><a href="{{ course.external_url }}" target="_blank" rel="noopener noreferrer">{{ course.external_url }}</a></dd>
+        <dd class="col-sm-9">
+          <a href="{{ page.external_url }}" target="_blank" rel="noopener noreferrer">
+            {{ page.external_url }}
+          </a>
+        </dd>
       </dl>
     </div>
   </section>
 
   <section>
     <h2 class="h4">Linked Skill Levels</h2>
-    {% if related_descriptors and related_descriptors.size > 0 %}
+    {% if related_skills.size > 0 %}
       <div class="list-group">
-        {% for descriptor in related_descriptors %}
-          {% assign related_skill = site.data.skills | where: 'skill_ref', descriptor.skill_ref | first %}
-          <article class="list-group-item">
-            <div class="d-flex justify-content-between flex-wrap gap-2 mb-1">
-              {% if related_skill %}
-                <a href="{{ related_skill.url | relative_url }}">{{ related_skill.name }}</a>
-              {% else %}
-                <span>{{ descriptor.skill_ref }}</span>
-              {% endif %}
-              <span class="text-body-secondary small">Level {{ descriptor.level_number }}</span>
-            </div>
-            <p class="mb-0">{{ descriptor.descriptor }}</p>
-          </article>
+        {% for skill in related_skills %}
+          {% comment %} 
+            Filter this specific skill's descriptors to find the exact level(s) 
+            tied to this course.
+          {% endcomment %}
+          {% assign course_descriptors = skill.level_descriptors | where_exp: "d", "d.associated_courses contains page.course_ref" %}
+          
+          {% for descriptor in course_descriptors %}
+            <article class="list-group-item">
+              <div class="d-flex justify-content-between flex-wrap gap-2 mb-1">
+                <a href="{{ skill.url | relative_url }}">{{ skill.title }}</a>
+                <span class="text-body-secondary small">Level {{ descriptor.level }}</span>
+              </div>
+              <p class="mb-0">{{ descriptor.text }}</p>
+            </article>
+          {% endfor %}
         {% endfor %}
       </div>
     {% else %}
