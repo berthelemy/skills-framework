@@ -6,14 +6,14 @@
 {% if sibling_pages.size > 0 %}
 <nav aria-label="Other pages in this section" class="mt-0">
 
-  {% for audience_group in audience_groups %}
+  {% for audience_group in audience_groups reversed %}
     {% assign audience_label = audience_group.name | replace: '-', ' ' | replace: '_', ' ' | capitalize %}
     <h3 class="h6 mt-3 mb-2">{{ audience_label }}</h3>
     <ul class="list-unstyled m-0 p-0">
       {% for sibling in audience_group.items | sort: "sort_order" %}
-        {% assign sibling_label = sibling.title | default: sibling.name | replace: '.md', '' | replace: '.markdown', '' | replace: '-', ' ' | capitalize %}
+        {% assign sibling_label = sibling.title | default: sibling.name | replace: '.md', '' | replace: '.markdown', '' | replace: '-', ' ' %}
         {% if sibling.url == page.url %}
-          <li class="m-0 p-0 pb-2"><i class="bi bi-arrow-right-square"></i> <strong>{{ sibling_label }}</strong></li>
+          <li class="m-0 p-0 pb-2"><i class="bi bi-arrow-right-square"></i> {{ sibling_label }}</li>
         {% else %}
           <li class="m-0 p-0 pb-2"><a class="m-0 p-0 d-inline" href="{{ sibling.url | relative_url }}" title="{{ sibling.description }}">{{ sibling_label }}</a></li>
         {% endif %}

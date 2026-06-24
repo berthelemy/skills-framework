@@ -1,35 +1,31 @@
 ---
 layout: docs
-title: Github pages deployment
-description: How to make your site available to the public on Github Pages (currently free)
+title: Deploying on Github pages
+audience: developers
+description: How to make your site available to the public on Github Pages
 sort_order: 6
 ---
-This repository includes a deployment workflow:
 
-- `.github/workflows/deploy-pages.yml`
+**Note:** Github Pages is currently free, and has been for years. Of course, that may change...
 
-## Configure `_config.yml`
+## Step 1: Configure _config.yml
 
-Set:
+Within `_config.yml` set:
 
 - `url`: your GitHub Pages domain
 - `baseurl`:
   - `""` for user/organization sites
   - `"/<repo>"` for project sites
 
-## Enable pages with actions
+## Step 2: Enable Pages with actions
 
 1. Commit and push the workflow file.
 2. In GitHub, open **Settings > Pages**.
 3. Set **Source** to **GitHub Actions**.
-4. Push to `main` or run the workflow manually from **Actions**.
 
-## Verify deployment
+## Step 3: Push your code to Github
 
-Check these published paths:
+1. Push to `main`
+2. Check that the included workflow has completed properly in Github's **Actions** tab.
 
-- `/llms.txt`
-- `/robots.txt`
-- `/sitemap.xml`
-- `/skills.json`
-- `/courses.json`
+**Note:** If you need to make changes to the workflow, you will find it here: `.github/workflows/deploy-pages.yml`

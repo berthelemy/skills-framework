@@ -19,9 +19,11 @@ items:
         url: /docs/how-to-use-site/
       - label: Content configuration
         url: /docs/content-configuration/
-      - label: Add skills and courses
-        url: /docs/add-skills-and-courses/
       - label: Github pages deployment
         url: /docs/github-pages-deployment/
       - label: Agent prompt templates
         url: /docs/agent-prompts/
+      - label: How to add/edit categories
+        url: /docs/how-to-add-edit-categories
+      - label: How to add/edit skills
+        url: /docs/how-to-add-edit-skills

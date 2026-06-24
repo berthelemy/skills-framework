@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+# This script verifies metadata tags, generated machine-readable artifacts, and build integrity.
+
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"

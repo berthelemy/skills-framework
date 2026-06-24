@@ -35,6 +35,10 @@ plugins:
 
 include: ["_pages"] # All pages in the _pages directory will be included in the site build, even though they are not in the root directory or a collection. This allows us to organize pages separately from posts and collections.
 
+sass:
+  sass_dir: _sass
+  sourcemap: never
+
 collections_dir: collections
 
 collections:
@@ -51,11 +55,13 @@ defaults:
       type: skills
     values:
       layout: skill
+      og_type: article
   - scope:
       path: ""
       type: courses
     values:
       layout: course
+      og_type: article
   - scope:
       path: "_pages/docs"
       type: pages

@@ -1,13 +1,16 @@
 ---
 layout: docs
-sort_order: 3
-title: Whole site configuration
-description: How to set up branding, colours and site-wide text
+sort_order: 4
+audience: developers
+title: Branding and site setup
+description:
 ---
 
-This project uses a whole-site configuration data file for branding and metadata defaults.
+This project uses a whole-site configuration data file, stored in `_data/content.yml`. This file contains instructions for branding and for metadata defaults.
 
-## What `_data/content.yml` controls
+> **Note:** If you know Jekyll, you know that normally these site-wide configurations are stored in `_config.yml`. I have decided to keep `_config.yml` only for developers who know what their doing. Whereas `content.yml` can be changed relatively safely by non-developers.
+
+## What does the file control?
 
 - Home page text snippets (for example `home_text`)
 - Branding:
@@ -60,26 +63,3 @@ bundle exec jekyll build
 - `branding.link_hover_color`
 - `branding.link_visited_color`
 - `branding.secondary_color`
-
-
-
-## Glossary definitions
-
-The site supports an inline glossary driven by [_data/glossary.csv](/_data/glossary.csv).
-
-The CSV must include these headers:
-
-- `item`
-- `definition`
-
-Behavior:
-
-- On each page, the first occurrence of a glossary `item` is highlighted with a dotted underline.
-- Clicking the highlighted term opens a modal with the matching `definition`.
-
-Example row:
-
-```csv
-item,definition
-taxonomy,"A classification structure used to organize related concepts."
-```

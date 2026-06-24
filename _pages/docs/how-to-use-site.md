@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: How to use this site
-audience: designers
-description: Instructions for usage by both humans and AI agents
+audience: users
+description: 
 sort_order: 1
 ---
 The published website produced by this template framework is designed to allow both humans and machines (AI agents particularly) to read and navigate the skills.

@@ -3,14 +3,17 @@ layout: page
 title: Courses
 permalink: /courses/
 ---
-
-<div class="row g-3">
-  {% comment %} 
-    Sort the courses natively by their title field from their front matter
+{% comment %} 
+    Group all courses by their provider front matter field and sort them alphabetically
   {% endcomment %}
-  {% assign sorted_courses = site.courses | sort: 'title' %}
+  {% assign grouped_courses = site.courses | group_by: "provider" | sort: "name" %}
+
+{% for group in grouped_courses %}
+<h2>{{ group.name }}</h2>
+<div class="row g-3">
   
-  {% for course in sorted_courses %}
+  
+  {% for course in group.items %}
     <div class="col-md-6">
       <article class="card card-elevated h-100">
         <div class="card-body">
@@ -18,7 +21,6 @@ permalink: /courses/
             <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
           </h2>
           <p class="mb-2">{{ course.description }}</p>
-          <p class="small text-body-secondary mb-2">Provider: {{ course.provider }}</p>
           <a href="{{ course.external_url }}" target="_blank" rel="noopener noreferrer">
             Visit external course page
           </a>
@@ -27,3 +29,4 @@ permalink: /courses/
     </div>
   {% endfor %}
 </div>
+{% endfor %}

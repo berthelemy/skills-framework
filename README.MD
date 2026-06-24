@@ -21,10 +21,10 @@ It provides:
 
 ## Quick start
 
-1. Clone and install dependencies:
+1. Fork and install dependencies:
 
 ```bash
-git clone <your-repo-url>
+git Fork <your-repo-url>
 cd skills-framework
 bundle install
 ```
@@ -44,11 +44,7 @@ bundle exec jekyll serve
 
 ## Documentation
 
-- Site usage (human + machine): [How to use this site]({% link _pages/docs/how-to-use-site.md %})
-- Whole-site content configuration (`content.yaml` equivalent): [Content configuration]({% link _pages/docs/content-configuration.md %})
-- Add skills and courses: [Add skills and courses]({% link _pages/docs/add-skills-and-courses.md %})
-- GitHub pages deployment: [Github pages deployment]({% link _pages/docs/github-pages-deployment.md %})
-- Interactive agent prompt templates: [Agent prompt templates]({% link _pages/docs/agent-prompts.md %})
+Documentation is available in the docs folder
 
 ## Related project guidance
 

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Agent prompt templates
+audience: designers
+title: Prompts for AI Agents
 description: How to prompt your AI agent to help you add skills and courses
 sort_order: 5
 ---

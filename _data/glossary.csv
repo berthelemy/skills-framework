@@ -3,3 +3,4 @@ skills framework,"A structured model that defines skills, levels, and related le
 level descriptor,"A statement describing expected capability and responsibility at a specific level."
 machine-readable,"Formatted so software and agents can reliably parse and process the content."
 YAML,"A way to describe data in a human-readable format."
+frontmatter,"A structured set of data fields using the YAML format, and set between `---` markers"
