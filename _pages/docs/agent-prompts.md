@@ -5,6 +5,8 @@ title: Prompts for AI Agents
 description: How to prompt your AI agent to help you add skills and courses
 sort_order: 5
 ---
+{% include note.html content = "Either talk to your developer, or follow the instructions at [Introduction for site developers](/docs/intro-site-developers) in order to get a copy of the site that you can work on." %}
+
 ## Interactive prompt: add a skill with associated data
 
 ```text

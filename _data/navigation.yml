@@ -11,19 +11,3 @@ items:
     url: /search/
   - label: Documentation
     url: /docs/
-    children:
-      - label: Documentation home
-        url: /docs/
-      - divider: true
-      - label: How to use this site
-        url: /docs/how-to-use-site/
-      - label: Content configuration
-        url: /docs/content-configuration/
-      - label: Github pages deployment
-        url: /docs/github-pages-deployment/
-      - label: Agent prompt templates
-        url: /docs/agent-prompts/
-      - label: How to add/edit categories
-        url: /docs/how-to-add-edit-categories
-      - label: How to add/edit skills
-        url: /docs/how-to-add-edit-skills

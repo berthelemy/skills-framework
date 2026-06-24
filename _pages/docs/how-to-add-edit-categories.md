@@ -5,7 +5,7 @@ audience: designers
 description: 
 sort_order: 4
 ---
-{% include note.html content = "Either talk to your developer, or follow the instructions at [Introduction for site developers](intro-site-developers.md) in order to get a copy of the site that you can work on." %}
+{% include note.html content = "Either talk to your developer, or follow the instructions at [Introduction for site developers](/docs/intro-site-developers) in order to get a copy of the site that you can work on." %}
 
 ## AI-assisted approach
 

@@ -30,11 +30,13 @@ Now, we need to give VS Code the ability to read the devcontainer configuration 
 
 ## Step 3: Create your own fork of this website
 
-There are two ways of making a copy of a git repository. One is 'cloning'. You use this when you always want to have the most up-to-date version of whatever the development team has produced, and maybe even contribute back to the main repository at some point.
+There are two ways of making a copy of a git repository. One is '**cloning**'. You use this when you always want to have the most up-to-date version of whatever the development team has produced, and maybe even contribute back to the main repository at some point.
 
-The other is 'forking'. You use a fork when you want your own copy of the repository, to make it into something that will be completely independent of the main repository. 
+The other is '**forking**'. You use a fork when you want your own copy of the repository, to make it into something that will be completely independent of the main repository. 
 
 Think of it like taking a master template and making a complete, independent copy of it under your own GitHub account. This way, you can change anything you want without accidentally breaking the original template.
+
+You will need a fork of this website.
 
 1. Open your web browser and go to the original project link: [github.com/berthelemy/skills-framework](https://github.com/berthelemy/skills-framework){:target="_blank"}.
 2. Look at the very top-right corner of the webpage. You will see a button labeled **Fork** (it usually has an icon that looks like a split path). Click it.

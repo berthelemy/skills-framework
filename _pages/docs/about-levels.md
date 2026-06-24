@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: About the levels
-audience: designers
+audience: users
 description: What the level numbers mean
 sort_order: 2
 ---
