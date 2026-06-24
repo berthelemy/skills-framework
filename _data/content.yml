@@ -2,7 +2,7 @@
 # They sit separately from the _config.yml file to allow changes to content with less risk of breaking site configuration.
 # Do NOT change the key names (eg. site_name) unless you know what you are doing. You CAN change the key values (eg. Skills Framework Site)
 
-home_text: This reference site shows how we can develop a skills framework that can be read easily by both humans and AI agents.
+home_text: This reference site shows how we can develop a skills framework that can be read easily by both humans and AI agents. Feel free to fork this site and make your own skills framework with it.
 branding:
   site_name: Skills Framework Reference Site
   tag_line: Human skills in a machine-readable format

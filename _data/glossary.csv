@@ -4,3 +4,4 @@ level descriptor,"A statement describing expected capability and responsibility 
 machine-readable,"Formatted so software and agents can reliably parse and process the content."
 YAML,"A way to describe data in a human-readable format."
 frontmatter,"A structured set of data fields using the YAML format, and set between `---` markers"
+fork,"Taking a copy of a code repository that you can make your own"
