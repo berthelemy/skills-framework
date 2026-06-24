@@ -52,3 +52,4 @@ Documentation is available in the docs folder.
 - Session metadata rules: [.github/copilot-instructions.md](.github/copilot-instructions.md)
 - Metadata CI workflow: [.github/workflows/metadata-validation.yml](.github/workflows/metadata-validation.yml)
 - GitHub Pages deploy workflow: [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml)
+
