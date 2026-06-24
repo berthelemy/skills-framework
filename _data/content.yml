@@ -18,7 +18,7 @@ branding:
     url: https://example.com
 seo:
   default_description: Reference Jekyll site mapping skills to courses
-  default_image: /assets/images/skills-og.png
+  default_image: /assets/images/og-image.png
   twitter_card: summary_large_image
 search:
   search-terms: semantic HTML, keyboard access, taxonomy # Typical search terms to suggest to users
