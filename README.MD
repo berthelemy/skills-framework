@@ -44,7 +44,7 @@ bundle exec jekyll serve
 
 ## Documentation
 
-Documentation is available in the docs folder
+Documentation is available in the docs folder.
 
 ## Related project guidance
 
