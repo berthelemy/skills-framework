@@ -17,8 +17,8 @@ branding:
     name: Your Organization Name
     url: https://example.com
 seo:
-  default_description: Human skills modeled for people and agents.
-  default_image: /assets/images/social-card.svg
+  default_description: Reference Jekyll site mapping skills to courses
+  default_image: /assets/images/skills-og.png
   twitter_card: summary_large_image
 search:
   search-terms: semantic HTML, keyboard access, taxonomy # Typical search terms to suggest to users

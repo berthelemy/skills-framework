@@ -46,7 +46,7 @@ title: Semantic HTML
 category_ref: accessibility
 layout: skill
 description: Create accessible, semantic HTML for web content.
-image: /assets/images/social-card.svg
+image:
 level_descriptors:
   - level: 1
     text: "Uses basic semantic tags correctly (e.g., main, nav, article) instead of generic divs, and ensures images have appropriate alt attributes."

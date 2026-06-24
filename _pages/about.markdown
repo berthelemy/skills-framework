@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 description: 
 og_type: article
-image: /assets/images/social-card.svg
+image:
 ---
 
 Skills Frameworks are an essential part of any work to develop the skills of large groups of people.

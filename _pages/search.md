@@ -3,7 +3,7 @@ layout: page
 title: Search
 description: Search across skills, courses, and documentation.
 og_type: website
-image: /assets/images/social-card.svg
+image:
 permalink: /search/
 ---
 

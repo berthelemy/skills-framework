@@ -38,7 +38,7 @@ If you use an AI coding tool, you can ask it to review this site and to add the 
 course_ref: course-my-course
 title: My Course
 description: Short summary for metadata and previews.
-image: /assets/images/social-card.svg
+image:
 provider: SkillPath Academy
 url: /courses/accessible-html-foundations/
 external_url: https://example.com/courses/accessible-html-foundations

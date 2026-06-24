@@ -3,7 +3,7 @@ skill_ref: taxonomy-design
 title: Taxonomy Design
 category_ref: data-modeling
 description: Model related concepts into stable machine-readable structures.
-image: /assets/images/social-card.svg
+image:
 level_descriptors:
   - level: 2
     text: "Applies established tags, categories, and metadata schemas consistently to content, and identifies basic relationships between existing terms."

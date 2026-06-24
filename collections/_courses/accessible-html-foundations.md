@@ -5,7 +5,7 @@ description: Introductory course covering semantic HTML, labels, and keyboard ac
 provider: SkillPath Academy
 
 external_url: https://example.com/courses/accessible-html-foundations
-image: /assets/images/social-card.svg
+image:
 ---
 
 Introductory course covering semantic HTML, labels, and keyboard access.

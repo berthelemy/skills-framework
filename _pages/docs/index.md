@@ -3,7 +3,7 @@ layout: docs
 title: Documentation
 description: 
 og_type: website
-image: /assets/images/social-card.svg
+image:
 permalink: /docs/
 sort_order: 0
 ---
