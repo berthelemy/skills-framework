@@ -4,7 +4,7 @@
 
 home_text: This reference site shows how we can develop a skills framework that can be read easily by both humans and AI agents. Feel free to fork this site and make your own skills framework with it.
 branding:
-  site_name: Skills Framework Reference Site
+  site_name: Skills Framework Starter Kit
   tag_line: Human skills in a machine-readable format
   primary_color: "#146E6D"
   secondary_color: "#1F2933"
